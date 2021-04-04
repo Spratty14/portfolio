@@ -1,0 +1,44 @@
+// Variables
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+//colors
+$esmerald: rgba(153,238,227,1);
+$green: rgba(163,255,194,1);
+$text: #53605e;
+$label: #8f999b;
+$disabled: #dee8e7;
+$dark: rgba(22,22,22,1);
+$black-forte: rgba(32,32,32,1);
+$grey: rgba(56,56,56,1);
+$grey-lite: rgba(85,85,85,1);
+$white-smoke: rgba(245,245,245,1);
+$gainsboro: rgba(220,220,220,1);
+$white-silver: rgba(192,192,192,1);
+
+//font and text
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+$textBold: 'Yanone Kaffeesatz', sans-serif;
+$console: 'Share Tech Mono', monospace;
+$ubuntu: 'Ubuntu', sans-serif;
+$logo: 'Major Mono Display', monospace;
+$popping: 'Poppins', sans-serif;
+$ibm: 'IBM Plex Mono', monospace;
+$textSm1: 0.25rem;
+$textSm2: 0.5rem;
+$textSm3: 0.7rem;
+$textMd1: 1rem;
+$textMd2: 1.25rem;
+$textMd3: 1.5rem;
+$textLg1: 2rem;
+$textLg2: 3rem;
+$textLg3: 4rem;
+
+// heights
+$nav-height: 3rem;
