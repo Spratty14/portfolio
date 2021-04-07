@@ -1,8 +1,31 @@
 @import 'variables';
 #habilidades{
+    .hab-title{
+        position: relative;
+        
+        h1{
+            width: 100%;
+            text-align: left;
+            color: $esmerald;
+            font-size: $textLg1;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+    }
+    .hab-title:before{
+        content: '';
+        position: absolute;
+        background: $esmerald;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+    }
     .row{
+        width: 100%;
         @include flex-center;
-        .col-md-4{
+        .col-xl-4{
             @include flex-center;
         }
     }
@@ -13,6 +36,18 @@
         width: 300px;
         height: 200px;
         transition: 0.5s;
+        @media screen and (min-width: 768px) {
+            width: 550px;
+            height: 350px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 300px;
+            height: 200px;
+        }
+        @media screen and (min-width: 1400px) {
+            width: 380px;
+            height: 280px;
+        }
     }
     .face-1{
         position: relative;
@@ -22,6 +57,15 @@
         flex-direction: column;
         z-index: 1;
         transform: translateY(100px);
+        @media screen and (min-width: 768px) {
+            transform: translateY(175px);
+        }
+        @media screen and (min-width: 1200px) {
+            transform: translateY(100px);
+        }
+        @media screen and (min-width: 1400px) {
+            transform: translateY(140px);
+        }
         .face-1-content{
             height: 100%;
             width: 100%;
@@ -44,28 +88,136 @@
     .face-2{
         position: relative;
         background: $white-smoke;
+        color: $dark;
         @include flex-center;
-        z-index: -1;
+        z-index: 0;
         box-sizing: border-box;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.8);
         transform: translateY(-100px);
-        
-        p{
+        @media screen and (min-width: 768px) {
+            transform: translateY(-175px);
+        }
+        @media screen and (min-width: 1200px) {
+            transform: translateY(-100px);
+        }
+        @media screen and (min-width: 1400px) {
+            transform: translateY(-140px);
+        }
+        .face-2-content{
+            scroll-behavior: smooth;
+            position: relative;
+            height: 100%;
+            display: flex;
+            overflow-x: auto;
+            .box{
+                text-align: center;
+                min-width: 300px;
+                height: 100%;
+            }
+            
+        }
+    }
+}
+.slider{
+    width: 100%;
+    height: 100%;
+
+    .slider_items{
+        display: flex;
+        flex-direction: column;
+        justify-content: cent5;
+        font-family: $popping;
+        svg{
+            fill: $dark;
+            width: 35%;
+            height: 35%;
+        }
+        h3{
+            text-align: center;
+            font-size: $textSm3;
+            font-weight: 300;
             margin: 0;
-            padding: 0;
+            color: $grey;
+        }
+        h1{
+            letter-spacing: 1px;
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: $textMd3;
+            text-align: center;
+        }
+        .bar-box{
+            width: 100%;
+            padding: 0 1rem ;
+            h2{
+                font-size: $textMd1;
+                font-weight: 200;
+                color: $esmerald;
+            }
+            .bar{
+                position: relative;
+                height: 5px;
+                width: 100%;
+                border-radius: 5px;
+            }
+            margin-bottom: 1rem;
+        }
+        p{ 
+            overflow-y: auto;
+            margin: 0;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            text-align: center;
+        }
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+    }
+    .slick-list{
+        height: 100%;
+        .slick-track{
+            height: 100%;
+        }
+    }
+    .priv_arrow, .next_arrow{
+        position: absolute;
+        color: $dark;
+        width: 100px;
+        height: 200px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        i{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: $textMd2;
+        }
+    }
+    .priv_arrow{
+        left: 0;
+        i{
+            left: 5px;
+        }
+    }
+    .next_arrow{
+        right: 0;
+        i{
+            right: 5px;
         }
     }
 }
 .hab-card:hover .face-1 .face-1-content{
     opacity: 1;
-    svg{
-        max-width: 40%;
-        max-height: 40%;
-    }
+    
 }
 .hab-card:hover .face-1{
     background: $esmerald;
 }
 .hab-card:hover .face-1,.hab-card:hover .face-2{
     transform: translateY(0);
+    box-shadow: none;
 }

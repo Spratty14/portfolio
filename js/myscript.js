@@ -51,14 +51,24 @@ $(document).ready(function () {
             $('#check').addClass('day')
             $('#check').removeClass('night')
             $('html, #check, img').addClass('dayMode')
+            $('.border-card').css('box-shadow','0 20px 50px rgba(255,255,255,0.8)')
             $('.mode-text').text('Light Mode')
         } else if(colorModeCount > 1) {
             $('#check').addClass('night')
             $('#check').removeClass('day')
             $('html, #check, img').removeClass('dayMode')
-            $('.mode-text').text('Night Mode')
+            $('.border-card').css('box-shadow','0 20px 50px rgba(0,0,0,0.8)')
+            $('.mode-text').text('Dark Mode')
             colorModeCount = 0;
         }
     })
 
+    $('.slider').slick({
+        infinite: true,
+        adaptiveHeight: false,
+        // arrows: false,
+        dots: false,
+        prevArrow: '<span class="priv_arrow"><i class="fas fa-angle-left"></i></span>',
+        nextArrow: '<span class="next_arrow"><i class="fas fa-angle-right"></i></span>',
+    })
 });

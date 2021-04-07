@@ -1,7 +1,10 @@
 @import 'variables';
-#inicio{
+
+#inicio {
     @include flex-center;
+    position: relative;
 }
+
 .wrapper-inicio {
     // position: absolute;
     @include flex-center;
@@ -9,86 +12,108 @@
     width: 100%;
     height: 100%;
     margin: 0;
-    
+
     .text-box-inicio {
         font-family: $popping;
         z-index: -1;
-        
+
         h1 {
             position: relative;
             font-size: $textLg1;
             font-weight: 500;
             color: $white-smoke;
-            @media screen and (min-width: 768px){
+
+            @media screen and (min-width: 768px) {
                 font-size: $textLg2;
             }
-            @media screen and (min-width: 1400px){
+
+            @media screen and (min-width: 1400px) {
                 font-size: $textLg3;
             }
         }
-        h2{
+
+        h2 {
             font-weight: 300;
             color: $esmerald;
             font-size: $textMd2;
-            @media screen and (min-width: 768px){
+
+            @media screen and (min-width: 768px) {
                 font-size: $textMd3;
             }
-            @media screen and (min-width: 1400px){
+
+            @media screen and (min-width: 1400px) {
                 font-size: $textLg1;
             }
-            
+
         }
-        
+
         p {
             font-weight: 200;
             position: relative;
             color: $gainsboro;
             font-size: $textSm3;
-            @media screen and (min-width: 768px){
+
+            @media screen and (min-width: 768px) {
                 font-size: $textMd1;
             }
-            @media screen and (min-width: 1400px){
+
+            @media screen and (min-width: 1400px) {
                 font-size: $textMd2;
             }
         }
-        
-        
+
+
     }
-    .download{
+
+    .download {
         margin: 3rem 0;
-        @media screen and (max-width: 768px){
+
+        @media screen and (max-width: 768px) {
             margin: 2rem 0;
         }
-        a{
+
+        a {
             font-family: $popping;
             font-size: $textMd1;
             text-decoration: none;
             color: $white-smoke;
-            background: none;
             border: 1px solid $white-smoke;
+            background: none;
             padding: 1rem;
             border-radius: 1rem;
-            @media screen and (max-width: 768px){
+            
+            @media screen and (max-width: 768px) {
                 border-radius: .7rem;
                 padding: .7rem;
                 font-size: $textSm3;
             }
-            @media screen and (min-width: 768px){
+            
+            @media screen and (min-width: 768px) {
                 font-size: $textMd1;
             }
-            @media screen and (min-width: 1400px){
+            
+            @media screen and (min-width: 1400px) {
                 font-size: $textMd2;
             }
-
+            
+        }
     }
+    .download:hover{
+        a{
+            color: $esmerald;
+            border: 1px solid $esmerald;
+            transition: 0.5s;
+            
+        }
     }
-
+    
     .perfil-box {
-        .perfil-box-img{
-            box-shadow: 0px 5px 30px -15px rgba(59,69,63,1);
+        .perfil-box-img {
+            box-shadow: 0px 5px 30px -15px rgba(59, 69, 63, 1);
             width: 100%;
             height: auto;
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
             }

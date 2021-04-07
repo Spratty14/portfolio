@@ -76,13 +76,15 @@
 }
 .scrollCardLeft[data-scroll="in"]{
     transform: translateX(0%);
-    box-shadow: 0px 0px 59px -45px rgba(0,0,0,1);
     transition: 1s;
 }
 .scrollCardRight[data-scroll="in"]{
     transform: translateX(0%);
-    box-shadow: 0px 0px 59px -45px rgba(0,0,0,1);
     transition: 1s;
+}
+.border-card[data-croll="in"]{
+    transition: 1s;
+    box-shadow: $border-card;
 }
 [data-scroll="in"]{
     transform: translateX(0%) translateY(0%) scale(1);
@@ -102,10 +104,11 @@
     opacity: 0;
 }
 .scrollCardLeft[data-scroll="out"]{
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
     transform: translateX(-130%);
 }
 .scrollCardRight[data-scroll="out"]{
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
     transform: translateX(130%);
+}
+.border-card[data-scroll="out"]{
+    box-shadow: none;
 }

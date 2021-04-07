@@ -1,0 +1,48 @@
+#contacto{
+    min-height: fit-content;
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: $textLg1;
+        font-weight: 400;
+        letter-spacing: 2px;
+        position: relative;
+        color: $esmerald;
+        margin-bottom: 2.5rem;
+    }
+    h1:before {
+        content: '';
+        position: absolute;
+        background: $esmerald;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+    }
+
+}
+.contact-list{
+    color: $white-smoke;
+    ul{
+        padding: 0;
+        li{
+            h2,h3{
+                font-size: $textMd1;
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                    font-size: $textMd3;
+                }
+                
+            }
+            @media screen and (min-width: 1200px) {
+                display: flex;
+            }
+            list-style: none;
+        }
+
+    }
+}

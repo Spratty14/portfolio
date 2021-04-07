@@ -1,0 +1,37 @@
+
+.edu-card{
+    padding: 1rem;
+    margin-top: 2rem;
+    h1{
+        position: relative;
+            width: 100%;
+            text-align: left;
+            color: $esmerald;
+            font-size: $textLg1;
+            letter-spacing: 2px;
+            font-weight: 400;
+            z-index: -1;
+    }
+    h1:after{
+        content: '';
+        position: absolute;
+        background: $esmerald;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+    }
+    h2{
+        font-size: $textMd3;
+        color: $white-smoke;
+        font-weight: 400;
+    }
+    h3{
+        font-size: $textMd2;
+        color: $white-silver;
+        font-weight: 200;
+    }
+    .edu-card-body ul li{
+        margin: 1rem 0;
+    }
+}
