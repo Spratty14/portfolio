@@ -66,7 +66,6 @@ $(document).ready(function () {
     $('.slider').slick({
         infinite: true,
         adaptiveHeight: false,
-        // arrows: false,
         dots: false,
         prevArrow: '<span class="priv_arrow"><i class="fas fa-angle-left"></i></span>',
         nextArrow: '<span class="next_arrow"><i class="fas fa-angle-right"></i></span>',
