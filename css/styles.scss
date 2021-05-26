@@ -1,0 +1,80 @@
+@import 'components/variables';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: $dark;
+}
+.clear-nav{
+    height: $nav-height + 1rem;
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+}
+section{
+    @include flex-center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-height: 100vh;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 5rem;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 2rem;
+    }
+    @media screen and (min-width: 992px) {
+        padding: 4.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 7.5rem;
+    }
+    @media screen and (min-width: 1400px) {
+        padding: 10rem;
+    }
+}
+.content{
+    position: relative;
+    width: 100%;
+    @include flex-center;
+}
+.disabled-category{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+.dayMode{
+    filter: invert(1) hue-rotate(180deg);
+
+}
+.border-card{
+    box-shadow: $border-card;
+}
+.border-card-light{
+    box-shadow: $border-card-light;
+}
+.slider{
+    width: 100%;
+    height: 100%;
+}
+
+// imports
+@import 'components/nav';
+@import 'components/navbar';
+@import 'components/colorMode';
+@import 'components/inicio';
+@import 'components/sobre';
+@import 'components/habilidades';
+@import 'components/educacion';
+@import 'components/contacto';
+// parallax
+@import 'parallax';

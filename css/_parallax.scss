@@ -1,0 +1,114 @@
+@import 'components/variables';
+// styles
+.scrollOutTop{
+    transform-origin: top;
+    transition: 1s;
+}
+.scrollOutLeft[data-scroll] {
+    transform-origin: left;
+    transition: 1s;
+}
+.scrollOutRight[data-scroll] {
+    transform-origin: right;
+    transition: 1s;
+}
+.scrollConsole{
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+.scrollConsole:before{
+    transform-origin: right;
+    transition: .5s;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $gainsboro;
+    width: 100%;
+    height: 100%;
+}
+
+.scrollConsoleSub{
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.6s;
+}
+.scrollConsoleSub:before{
+    transform-origin: right;
+    transition: .6s;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $esmerald;
+    width: 100%;
+    height: 100%;
+}
+.scrollFade{
+    transform-origin: center;
+    transition: 1.5s;
+}
+.scrollCardLeft{
+    transform-origin: left;
+    transition: 1.5s;
+}
+.scrollCardRight{
+    transform-origin: left;
+    transition: 1s;
+}
+// visible
+.scrollConsole[data-scroll="in"]{
+    transform: scaleX(1);
+}
+.scrollConsole[data-scroll="in"]:before{
+    transform: scaleX(0);
+    transition-delay: .5s;
+}
+.scrollConsoleSub[data-scroll="in"]{
+    transform: scaleX(1);
+}
+.scrollConsoleSub[data-scroll="in"]:before{
+    transform: scaleX(0);
+    transition-delay: .7s;
+}
+.scrollCardLeft[data-scroll="in"]{
+    transform: translateX(0%);
+    transition: 1s;
+}
+.scrollCardRight[data-scroll="in"]{
+    transform: translateX(0%);
+    transition: 1s;
+}
+.border-card[data-croll="in"]{
+    transition: 1s;
+    box-shadow: $border-card;
+}
+[data-scroll="in"]{
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 1;
+}
+// hidden
+.scrollOutLeft[data-scroll="out"]{
+    transform: translateX(-130%);
+}
+.scrollOutRight[data-scroll="out"]{
+    transform: translateX(100%);
+}
+.scrollOutTop[data-scroll="out"]{
+    transform: translateY(-100%);
+}
+.scrollFade[data-scroll="out"]{
+    opacity: 0;
+}
+.scrollCardLeft[data-scroll="out"]{
+    transform: translateX(-130%);
+}
+.scrollCardRight[data-scroll="out"]{
+    transform: translateX(130%);
+}
+.border-card[data-scroll="out"]{
+    box-shadow: none;
+}
